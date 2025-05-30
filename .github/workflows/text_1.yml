@@ -12,9 +12,11 @@ on:
 jobs:
     test-build:
         runs-on: ubuntu-latest
-        steps:
-          - name: ls
-            run: |
-              echo "Hola Mundo" >> hola.txt
-              cat hola.txt
 
+        steps:
+          -name: checkout
+            uses: actions/checkout@v2
+          - name: ls
+            run:
+              chmo +x script.sh
+              ./script.sh
