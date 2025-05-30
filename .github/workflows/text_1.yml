@@ -15,6 +15,6 @@ jobs:
         steps:
           - name: ls
             run: |
-              echo "Hola Mundo"
+              echo "Hola Mundo" >> hola.txt
               cat hola.txt
 
